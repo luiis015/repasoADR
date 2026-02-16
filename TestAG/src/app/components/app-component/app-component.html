@@ -1,0 +1,35 @@
+<div class="app">
+  <!-- Navbar mejorado con Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">📚 Biblioteca CES</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              🏠 Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['agregar']" routerLinkActive="active">
+              ➕ Agregar
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['listar']" routerLinkActive="active">
+              📖 Listar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Aquí se cargan los componentes según la ruta -->
+  <router-outlet></router-outlet>
+</div>
