@@ -6,7 +6,6 @@ import { ListarComponent } from './components/listar/listar';
 const routes: Routes = [
   { path: 'agregar', component: AgregarComponent },
   { path: 'listar', component: ListarComponent },
-  { path: '', redirectTo: '/listar', pathMatch: 'full' }
 ];
 
 @NgModule({
