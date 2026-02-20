@@ -19,7 +19,8 @@ class LoginFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        database = FirebaseDatabase.getInstance("https://repasoadr-default-rtdb.europe-west1.firebasedatabase.app/")
+        database =
+            FirebaseDatabase.getInstance("https://repasoadr-default-rtdb.europe-west1.firebasedatabase.app/")
     }
 
 
@@ -33,7 +34,6 @@ class LoginFragment : Fragment() {
     }
 
 
-
     override fun onResume() {
         super.onResume()
         binding.bottomIniciarSesionLogin.setOnClickListener {
@@ -41,19 +41,18 @@ class LoginFragment : Fragment() {
             val pass = binding.ContrasenaDelLogin.text.toString().trim()
 
             if (correo.isEmpty() || pass.isEmpty()) {
-                Snackbar.make(binding.root, "Por favor, complete todos los campos", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(
+                    binding.root,
+                    "Por favor, complete todos los campos",
+                    Snackbar.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
             val loginMap = hashMapOf<String, Any>(
                 "correo" to correo,
                 "timestamp" to System.currentTimeMillis()
             )
-
             database.reference.child("logins").push().setValue(loginMap)
-
-
-
-
             findNavController().navigate(R.id.action_loginFragment_to_lanzamientosFragment)
         }
     }
