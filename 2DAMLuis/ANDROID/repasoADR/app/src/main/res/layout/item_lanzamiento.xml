@@ -33,30 +33,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Título del lanzamiento"
-                android:textApparance="?atr/textAppearanceSubtitle1" />
+                android:textAppearance="?attr/textAppearanceSubtitle1" />
 
             <TextView
                 android:id="@+id/details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="descripción "
-                android:textApparance="?atr/textAppearanceBody2"
-
-                />
+                android:text="descripción"
+                android:textAppearance="?attr/textAppearanceBody2" />
 
             <TextView
                 android:id="@+id/links"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="categoria"
-                android:textApparance="?atr/textAppearanceBody2"
-
-                />
-
-
+                android:textAppearance="?attr/textAppearanceBody2" />
 
         </LinearLayout>
-
 
     </LinearLayout>
 

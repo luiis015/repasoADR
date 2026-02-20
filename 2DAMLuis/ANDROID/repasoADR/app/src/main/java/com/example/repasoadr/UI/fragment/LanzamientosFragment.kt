@@ -68,7 +68,9 @@ class LanzamientosFragment: Fragment() {
 
                 }
             },
-            {}
+            {
+
+            }
         )
 
         Volley.newRequestQueue(requireContext()).add(request)

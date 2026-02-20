@@ -1,16 +1,13 @@
 package com.example.repasoadr.adapter
 
 import android.content.Context
-
-
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-
 import com.bumptech.glide.Glide
 import com.example.repasoadr.databinding.ItemLanzamientoBinding
 import com.example.repasoadr.model.Launch
-import com.google.firebase.database.FirebaseDatabase
+
 
 class LaunchAdapter(var context: Context) : RecyclerView.Adapter<LaunchAdapter.MyHolder>() {
 
@@ -26,10 +23,8 @@ class LaunchAdapter(var context: Context) : RecyclerView.Adapter<LaunchAdapter.M
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
         val launch = lista[position]
-
         holder.binding.name.text = launch.name
         holder.binding.details.text = launch.details
-
         Glide.with(context).load(launch.links?.patch?.small).into(holder.binding.ivImagen)
         /*
                 holder.binding.btnFav.setOnClickListener {

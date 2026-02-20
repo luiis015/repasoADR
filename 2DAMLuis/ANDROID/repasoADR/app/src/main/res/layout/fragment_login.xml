@@ -41,15 +41,5 @@
         android:paddingBottom="8dp"
         android:text="Iniciar Sesión"></Button>
 
-    <Button
-        android:id="@+id/bottomRegistrarseLogin"
-        android:layout_width="158dp"
-        android:layout_height="wrap_content"
-        android:paddingLeft="24dp"
-        android:paddingTop="8dp"
-        android:paddingRight="24dp"
-        android:paddingBottom="8dp"
-        android:text="Registrarse"></Button>
-
 
 </LinearLayout>
