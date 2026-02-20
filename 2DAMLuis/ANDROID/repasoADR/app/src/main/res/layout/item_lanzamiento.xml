@@ -1,51 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="20dp"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="20dp">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:orientation="horizontal"
+        android:padding="12dp">
 
-        <TextView
-            android:id="@+id/textview1"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/ivImagen"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/llContenido"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="Nombre"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp">
 
-        <TextView
-            android:id="@+id/text_pais"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textview1"
-            app:layout_constraintTop_toTopOf="@+id/textview1" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título del lanzamiento"
+                android:textApparance="?atr/textAppearanceSubtitle1" />
 
-        <TextView
-            android:id="@+id/textview2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Capital"
-            app:layout_constraintStart_toStartOf="@+id/textview1"
-            app:layout_constraintTop_toBottomOf="@+id/textview1" />
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="descripción "
+                android:textApparance="?atr/textAppearanceBody2"
 
-        <TextView
-            android:id="@+id/text_capital"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintStart_toStartOf="@+id/text_pais"
-            app:layout_constraintTop_toTopOf="@+id/textview2" />
+                />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/links"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="categoria"
+                android:textApparance="?atr/textAppearanceBody2"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
